@@ -9,7 +9,7 @@ const NotFound = () => {
         <section className='bg-light vh-100 d-flex justify-content-center align-items-center text-center'>
             <div>
                 <h1>Not Found</h1>
-                <img src={NOT_FILE_NAME} alt="Not Found" />
+                <img src={NOT_FILE_NAME} alt="Not Found" width={"400px"}/>
                 <br />
                 <p>Page is not available.</p>
                 <div className='flexGrow'>
