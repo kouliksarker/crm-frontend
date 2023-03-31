@@ -1,7 +1,10 @@
 import React, { useState } from "react"
 import { Dropdown, DropdownButton } from "react-bootstrap"
 import axios from 'axios'
-//const BASE_URL = process.env.CRM_APP_SERVER
+const dotenv = require('dotenv')
+dotenv.config()
+const BASE_URL = process.env.REACT_APP_SERVER
+
 function Login() {
     const [showSignup, setShowSignup] = useState(false)
     const [message, setMessage] = useState("")
@@ -58,6 +61,7 @@ function Login() {
     }
 
     const loginFn = (e) => {//e -> event object representing the submit event
+
         const userId = document.getElementById('userId').value
         const password = document.getElementById('password').value
         const data = {
@@ -65,7 +69,7 @@ function Login() {
             "password": password
         }
         e.preventDefault()//prevents default behaviour of the submit event i.e submit the form & refresh 
-        axios.post('http://localhost:3000/crm/api/auth/signin', data)
+        axios.post(BASE_URL + '/crm/api/auth/signin', data)
             .then(response => {
                 if (response.status === 200) {
                     if (response.data.message) {
@@ -110,7 +114,7 @@ function Login() {
         }
         e.preventDefault()
 
-        axios.post('http://localhost:3000/crm/api/auth/signup', data)
+        axios.post(BASE_URL + '/crm/api/auth/signup', data)
             .then(response => {
                 if (response.status === 201) {
                     window.location.href = "/"
@@ -147,6 +151,7 @@ function Login() {
     }
 
     return (
+        
         <div id="loginPage">
             <div id="loginPage" className="bg-primary d-flex justify-content-center align-items-center vh-100">
                 <div className="card m-5 p-5">

@@ -1,5 +1,5 @@
 import { CSidebar, CSidebarNav, CNavTitle, CNavItem } from '@coreui/react';
-import '../styles/sidebar.css'
+import '../Styles/sidebar.css'
 import { Link } from 'react-router-dom';
 import React from "react"
 function Sidebar() {
@@ -30,5 +30,6 @@ function Sidebar() {
         </CSidebar>
     )
 }
+
 
 export default Sidebar

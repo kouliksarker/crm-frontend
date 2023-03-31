@@ -2,15 +2,15 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-// import "bootstrap-icons/font/bootstrap-icons.css";
-// import 'react-circular-progressbar/dist/styles.css';
-// import '@coreui/coreui/dist/css/coreui.min.css';
-// import '@coreui/coreui/dist/js/coreui.min.js';
+import "bootstrap-icons/font/bootstrap-icons.css";
+import 'react-circular-progressbar/dist/styles.css';
+import '@coreui/coreui/dist/css/coreui.min.css';
+import '@coreui/coreui/dist/js/coreui.min.js';
 import './App.css';
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import Customer from "./pages/Customer";
-// import Engineer from "./pages/Engineer";
+import Engineer from "./pages/Engineer";
 import NotFound from "./pages/NotFound";
 import Unauthorized from "./pages/Unauthorized";
 
@@ -54,7 +54,7 @@ function App() {
             </Suspense>
           }
         />
-        {/* <Route
+        <Route
           exact
           path="/engineer"
           element={
@@ -62,7 +62,7 @@ function App() {
               <Engineer />
             </Suspense>
           }
-        /> */}
+        />
         <Route
           path="/*"
           element={
